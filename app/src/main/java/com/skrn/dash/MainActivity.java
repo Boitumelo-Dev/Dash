@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -23,9 +24,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        //setContentView(R.layout.login);
-        Intent intent = new Intent(MainActivity.this, ClientDashboardActivity.class);
-        startActivity(intent);
+        setContentView(R.layout.login);
+        Button login = (Button) findViewById(R.id.button);
+        login.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v) {
+                // Handle the click event
+                Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this,ClientDashboardActivity.class);
+                startActivity(i);
+          }});
 
     }
 }

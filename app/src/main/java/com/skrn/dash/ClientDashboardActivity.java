@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ClientDashboardActivity extends AppCompatActivity {
 
-    public static String ServiceClicked;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +33,7 @@ public class ClientDashboardActivity extends AppCompatActivity {
         servicesListView.setOnItemClickListener((parent, view, position, id) -> {
             Service selectedService = (Service) parent.getItemAtPosition(position);
             Toast.makeText(ClientDashboardActivity.this, "Clicked: " + selectedService.getName(), Toast.LENGTH_SHORT).show();
-            ServiceClicked = selectedService.getName();
+            //ServiceClicked = selectedService.getName();
             Intent intent = new Intent(ClientDashboardActivity.this, AvailableWorkerActivity.class);
             startActivity(intent);
         });
