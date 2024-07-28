@@ -19,7 +19,7 @@ public class WorkerAdapter extends ArrayAdapter<Worker> {
         Worker worker = getItem(position);
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.worker_list, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.available_workers, parent, false);
         }
 
         TextView name = convertView.findViewById(R.id.service_name);

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.client_dashboard);
+        //setContentView(R.layout.login);
         Intent intent = new Intent(MainActivity.this, ClientDashboardActivity.class);
         startActivity(intent);
 
